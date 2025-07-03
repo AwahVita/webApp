@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example Title</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+
+    <style>
+        
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+                      
+            grid-column-gap: 15px;
+        }
+        .grid-item {
+            margin: 5px;
+            background-color: #2196F3; 
+            padding: 50px;
+            
+        }
+        .grid-item:nth-child(1) {
+            background-color: red;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>           
+        </div>
+
+
+        <!-- 
+        <form id="signup-form">
+            <input type="text" placeholder="Name"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="password" placeholder="Password"><br>
+            <button type="button" id="validate">Validate</button>
+        </form> -->
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <!-- ✅ jQuery script placed just before closing </body> tag -->
+    <!--- <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>---->
+    <!-- ✅ Your jQuery code -->
+    <!--<script src="result.js" type="module"></script> -->
+
+    <script>
+        $("#validate").on("click", function() {
+            $("#signup-form").find("input").each(function() {
+                if ($(this).val() === "") {
+                    $(this).css("border", "2px solid red");
+                } else {
+                    $(this).css("border", "2px solid green");
+                }
+            });
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>
